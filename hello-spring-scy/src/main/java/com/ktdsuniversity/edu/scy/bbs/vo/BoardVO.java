@@ -1,5 +1,9 @@
 package com.ktdsuniversity.edu.scy.bbs.vo;
 
+import java.util.List;
+
+import com.ktdsuniversity.edu.scy.file.vo.FileVO;
+
 public class BoardVO {
 	private int id;
 	private String subject;
@@ -11,6 +15,14 @@ public class BoardVO {
 	private String fileName;
 	private String originFileName;
 	
+	private List<FileVO> fileList;
+	
+	public List<FileVO> getFileList() {
+		return this.fileList;
+	}
+	public void setFileList(List<FileVO> fileList) {
+		this.fileList = fileList;
+	}
 	public int getId() {
 		return this.id;
 	}

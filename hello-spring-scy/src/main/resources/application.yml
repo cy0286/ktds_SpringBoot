@@ -15,8 +15,22 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: SPRING_BOOT
     password: 1234
+  servlet:
+    multipart:
+      max-file-size: 104857600
+      max-request-size: 10485760
     
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
-  mapper-locations: classpath:com/ktdsuniversity/edu/scy/**/dao/mapper/*.xml
+  mapper-locations: classpath:com/ktdsuniversity/edu/scy/**/dao/impl/mapper/*.xml
 
+app:
+  multipart:
+    base-dir:     
+    windows: C:\upload-files #서버에 업로드된 파일이 저장되는 경로
+    linux: /var/local/src/upload-files
+    macos: /document/upload-files
+    obfuscation:
+      enable: true
+      hide-ext:
+        enable: true
